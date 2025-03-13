@@ -1,0 +1,227 @@
+@keyframes flip-vertical-right-normal {0% { transform: rotateY(0); } 100% { transform: rotateY(180deg);} }
+
+* {
+  font-family: var(--font-inter);
+  color: var(--white);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  align-items: center;
+}
+
+.titulos {
+  padding: 6px;
+  border: var(--white) solid 0.05cm;
+  border-radius: 40px;
+  background-color: var(--black);
+  width: 30rem;
+}
+
+h3 {
+  background-color: var(--violet);
+  padding: 8px;
+  border: var(--black) solid 0.05cm;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.softskills {
+  display: flex;
+  list-style-type: none;
+}
+
+.softskills li {
+  font-weight: bold;
+  margin-right: 16px;
+  font-style: italic;
+  border-bottom: 0.1cm solid var(--black);
+}
+
+.textos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  place-items: center;
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 24px;
+}
+
+.textoSobre {
+  width: 90%;
+}
+
+.projeto {
+  width: 10rem;
+  color: var(--black);
+  font-weight: bold;
+  padding: 7rem 2rem 7rem 2rem;
+  border: solid 0.05cm var(--black);
+  border-radius: 10px;
+  background-color: var(--white);
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.projeto:hover {
+  animation: flip-vertical-right-normal 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) 1 normal both;
+}
+
+#minhaFoto {
+  display: block;
+  padding: 1rem;
+  border-radius: 100%;
+  width: 20%;
+  margin: auto;
+}
+
+header {
+  background-color: var(--black);
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  position: relative;
+  padding: 20px;
+  text-align: center;
+  background-color: var(--violet);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  background-color: var(--purple);
+}
+
+#todaSecao {
+  border-radius: 20px;
+  overflow: hidden;
+  /*necessário porque (section) estava ignorando o border-radius e soprepondo ele*/
+}
+
+footer {
+  background-color: var(--black);
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  padding: 1px 0;
+  position: static;
+  bottom: 0;
+  width: 100%;
+}
+
+form {
+  display: inline-block;
+  text-align: left;
+}
+
+form label {
+  display: block;
+  margin-top: 10px;
+}
+
+form textarea {
+  width: 100%;
+  max-width: 500px;
+}
+
+#mensagem {
+  border: solid var(--black) 0.05cm;
+  color: var(--violet);
+}
+
+#botaoEnvio {
+  color: var(--purple);
+  padding: 5px 7px 5px 7px;
+  margin-top: 16px;
+  margin-bottom: 20px;
+  border: solid var(--black) 0.05cm;
+  border-radius: 20px;
+  cursor:pointer;
+
+  transition-property: box-shadow, transform;
+  transition-duration: 350ms;
+  transition-timing-function: ease;
+
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.24);
+}
+
+#botaoEnvio:is(:hover, :focus) {
+  box-shadow: 0px 8px 10px 1px rgba(0, 0, 0, 0.2);
+  transform: scale(1.2);
+}
+
+#redes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:center; 
+}
+
+#icones {
+  height: 1.5rem;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+}
+
+#copy {
+  height: 0.5rem;
+  margin-top: 0.1px;
+}
+
+/*colocar a parte de softskills e dos projetos*/
+
+@media (max-width: 900px) {
+  #minhaFoto {
+    width: 30%;
+  }
+}
+
+@media (max-width: 550px) {
+  #minhaFoto {
+    width: 35%;
+  }
+
+  .titulos {
+    width: 20rem;
+  }
+
+  form textarea {
+    width: 90%;
+    max-width: 500px;
+  }
+
+  .formArea {
+    margin-left: 5%;
+    margin-right: 2%;
+  }
+}
+
+

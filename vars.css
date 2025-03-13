@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+
+    /*Fontes*/
+    --font-inter: "Inter", sans-serif;
+
+    /*Cores*/
+    --black: #161613;
+    --white: #f9f9e7;
+    --purple: #582770;
+    --violet: #773d94;
+
+}
