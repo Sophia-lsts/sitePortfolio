@@ -12,12 +12,20 @@ body {
   align-items: center;
 }
 
+p {
+  text-align: center;
+}
+
+a {
+  color: var(--purple);
+}
+
 .titulos {
   padding: 6px;
   border: var(--white) solid 0.05cm;
   border-radius: 40px;
   background-color: var(--black);
-  width: 30rem;
+  width: 28rem;
 }
 
 h3 {
@@ -29,23 +37,30 @@ h3 {
 
 .softskills {
   display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
   list-style-type: none;
+  width: 90%;
 }
 
 .softskills li {
   font-weight: bold;
+  margin-top: 16px;
   margin-right: 16px;
   font-style: italic;
-  border-bottom: 0.1cm solid var(--black);
+  color: var(--white);
+  text-shadow: var(--black) -2px -3px;
 }
 
 .textos {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
   place-items: center;
+  gap: 1rem;
   width: 90%;
-  margin-bottom: 24px;
+  margin-bottom: 30px;
 }
 
 .textoSobre {
@@ -59,7 +74,7 @@ h3 {
   height: 4rem;
   color: var(--black);
   font-weight: bold;
-  padding: 3rem;
+  padding: 2rem;
   border: solid 0.05cm var(--black);
   border-radius: 10px;
   background-color: var(--white);
@@ -79,14 +94,15 @@ h3 {
 }
 
 .projeto:hover {
-  height: 20rem;
+  height: 24rem;
 }
 
 .projeto:hover .detalhamento {
   font-size: small;
   font-weight:normal;
-  max-height: 20rem;
+  max-height: 24rem;
   color: var(--black);
+  padding-bottom: 16px;
 }
 
 #minhaFoto {
@@ -156,6 +172,7 @@ footer {
 form {
   display: inline-block;
   text-align: left;
+  width: 100%;
 }
 
 form label {
@@ -165,7 +182,7 @@ form label {
 
 form textarea {
   width: 100%;
-  max-width: 500px;
+  max-width: 28rem;
 }
 
 #mensagem {
@@ -219,13 +236,30 @@ a {
 
 /*colocar a parte de softskills e dos projetos*/
 
+
+@media (max-width: 1095px) {
+  .textos {
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 2rem;
+  gap: 2rem;
+  }
+
+  .projeto {
+    margin-bottom: 2rem;
+  }
+}
+
 @media (max-width: 900px) {
   #minhaFoto {
     width: 30%;
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 600px) {
+  .textos {
+    grid-template-columns: 1fr;
+    }
+
   #minhaFoto {
     width: 35%;
   }
