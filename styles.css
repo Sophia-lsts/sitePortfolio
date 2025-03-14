@@ -1,8 +1,11 @@
 
-
 * {
   font-family: var(--font-inter);
   color: var(--white);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
