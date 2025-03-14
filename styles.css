@@ -1,4 +1,4 @@
-@keyframes flip-vertical-right-normal {0% { transform: rotateY(0); } 100% { transform: rotateY(180deg);} }
+
 
 * {
   font-family: var(--font-inter);
@@ -45,7 +45,6 @@ h3 {
   grid-template-rows: auto;
   place-items: center;
   width: 90%;
-  padding: 10px;
   margin-bottom: 24px;
 }
 
@@ -54,18 +53,40 @@ h3 {
 }
 
 .projeto {
+  display: grid;
+  place-items: center;
   width: 10rem;
+  height: 4rem;
   color: var(--black);
   font-weight: bold;
-  padding: 7rem 2rem 7rem 2rem;
+  padding: 3rem;
   border: solid 0.05cm var(--black);
   border-radius: 10px;
   background-color: var(--white);
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+
+  transition: height 0.5s ease;
+}
+
+.titulosProjetos {
+  color: var(--black);
+}
+
+.detalhamento {
+  max-height: 0;
+  overflow: hidden; 
+  transition: max-height 0.5s ease; 
 }
 
 .projeto:hover {
-  animation: flip-vertical-right-normal 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) 1 normal both;
+  height: 20rem;
+}
+
+.projeto:hover .detalhamento {
+  font-size: small;
+  font-weight:normal;
+  max-height: 20rem;
+  color: var(--black);
 }
 
 #minhaFoto {
