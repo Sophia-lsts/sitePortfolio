@@ -94,7 +94,6 @@ h3 {
 .detalhamento {
   max-height: 0;
   overflow: hidden; 
-  transition: max-height 0.5s ease; 
 }
 
 .projeto:hover {
@@ -107,6 +106,7 @@ h3 {
   max-height: 24rem;
   color: var(--black);
   padding-bottom: 16px;
+  transition: max-height 0.5s ease;
 }
 
 #minhaFoto {
